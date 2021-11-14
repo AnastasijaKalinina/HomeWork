@@ -11,14 +11,23 @@ public class task2 {
    */
     public static void main(String[] args) {
         double operand1 = 10.1;
-        double operand2 = 32.9;
-        char operation = '+';
-        getResult(operand1, operand2, operation);
-
-    }
-    public static void getResult(double a, double b, char c) {
-        double result = (a + c + b);
-        System.out.println(result);
+        double operand2 = 32.6;
+        char operation = '*';
+        System.out.println(getResult(operand1, operand2, operation));
     }
 
+    public static double getResult(double a, double b, char c) {
+        if (c == '+') {
+            return a + b;
+        } else if (c == '-') {
+            return a - b;
+        } else if (c == '*') {
+            return a * b;
+        } else if (c == '/') {
+            return a / b;
+        } else {
+            return c;
+        }
+
+    }
 }

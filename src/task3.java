@@ -10,23 +10,31 @@ public class task3 {
 Учитывать, что площадь может быть вещественным числом.
      */
     public static void main(String[] args) {
-        int a1 = 9, a2 = 8;
-        int b1 = 6, b2 = 5;
-        int c1 = (a1 * b1) /2;
-        int c2 = (a2 * b2) /2;
-        System.out.println(c1);
-        System.out.println(c2);
-        comparison(c1, c2);
+        int a1 = 6, a2 = 7;
+        int b1 = 2, b2 = 5;
+        areaTriangle(a1, b1, a2, b2);
+        comparison(area1, area2); // не понимаю, почему не могу вставить с возвратом эти параметры...
     }
 
-    public static void comparison(int c1, int c2){
-        if(c1 > c2){
+
+    public static void areaTriangle(int a1, int b1, int a2, int b2) {
+        double area1 = (double) (a1 * b1) / 2;
+        double area2 = (double) (a2 * b2) / 2;
+
+        System.out.println(area1);
+        System.out.println(area2);
+    }
+
+
+    public static void comparison(double area1, double area2) {
+        if (area1 > area2) {
             System.out.println("Первый треугольник больше второго");
-        }else if(c1 < c2){
+        } else if (area1 < area2) {
             System.out.println("Первый треугольник меньше второго");
-        }else if(c1 == c2){
+        } else {
             System.out.println("Первый треугольник равен второму");
         }
+
     }
 }
 
